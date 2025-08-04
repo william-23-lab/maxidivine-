@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Media & Gallery</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles/mediagallery.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/MDicon.jpg" type="image/png">
+</head>
+<body id="Top"> 
+
+  <header class="navbar">
+    <div class="container1">
+      <div class="logo" data-aos="slide-right" data-aos-delay="100">
+        <a href="index.html"><img src="images/Maxi.png" alt="maxidivine"></a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown-parent">
+            <a href="javascript:void(0)">Services</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a href="buildingmaterials.html">Building Materials</a>
+                <ul class="submenu">
+                  <li><a href="buildingmaterials.html">Cement</a></li>
+                  <li><a href="buildingmaterials.html">Iron Rods</a></li>
+                  <li><a href="buildingmaterials.html">Concrete Products</a></li>
+                  <li><a href="buildingmaterials.html">Wall & Floor Tiles</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">Estate Services</a>
+                <ul class="submenu">
+                  <li><a href="#">Quantity Surveying</a></li>
+                  <li><a href="#">Architecture Work</a></li>
+                  <li><a href="#">U-drain construction</a></li>
+                  <li><a href="#">Architecture & Planning</a></li>
+                  <li><a href="#">Interior & Exterior Design</a></li>
+                  <li><a href="#">Building Project</a></li>
+                  <li><a href="#">Land Surveying</a></li>
+                  <li><a href="#">Estimates</a></li>
+                  <li><a href="#">Consultancy Services</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="roofings.html">Roofing Products</a>
+                <ul class="submenu">
+                  <li><a href="roofings.html">Roofing Sheets</a></li>
+                  <li><a href="roofings.html">Roof Trusses</a></li>
+                  <li><a href="roofings.html">Roof Nails & Screws</a></li>
+                  <li><a href="roofings.html">Installation</a></li>
+                </ul>
+              </li>
+                <li class="sub">
+                <a href="blockfactory.html">Block Services</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="dropdown-parent">
+            <a href="">News & Media</a>
+            <ul class="dropdown-menu">
+              <li class="sub">
+                <a href="newsblogs.html">News & Blogs</a>
+              </li>
+              <li class="sub"><a href="mediagallery.html">Media Gallery</a>
+              </li>
+            </ul>
+          </li>
+          <div class="language-selector">
+  <label for="language">🌐 Language:</label>
+  <select id="language">
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="es">Español</option>
+  </select>
+</div>
+         
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+ <section class="about-hero">
+  <div class="about-hero-overlay">
+    <div class="about-hero-text">
+      <h1 data-aos="slide-right" data-aos-delay="100">Media Gallery</h1>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-wrapper">
+  <h1 class="gallery-title">Explore Our Gallery</h1>
+
+  <div class="tab-buttons">
+    <button class="tab-btn active" onclick="showGallery('video')">Video Gallery</button>
+    <button class="tab-btn" onclick="showGallery('photo')">Photo Gallery</button>
+  </div>
+
+  <div id="video" class="gallery-tab active">
+  <div class="video-thumbnail-gallery">
+    <div class="video-thumb" onclick="openVideo('videos/MAXIDIVINE CHARITY TO KING JESUS CHARITY HOME.mp4')">
+      <img src="images/king 2.jpg" alt="Video 1 Thumbnail" />
+      <div class="play-icon">▶</div>
+    </div>
+    <div class="video-thumb" onclick="openVideo('videos/The King Jesus Charity Home receives donations from Maxidivine Ltd..mp4')">
+      <img src="images/king 3.jpg" alt="Video 2 Thumbnail" />
+      <div class="play-icon">▶</div>
+    </div>
+    <div class="video-thumb" onclick="openVideo('videos/fac.mp4')">
+      <img src="images/f.jpg" alt="Video 3 Thumbnail" />
+      <div class="play-icon">▶</div>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-content">
+    <span class="video-close" onclick="closeVideo()">×</span>
+    <video id="localVideoPlayer" controls autoplay></video>
+  </div>
+</div>
+
+
+
+  <div id="photo" class="gallery-tab">
+   <div class="gallery-grid">
+    <img src="images/king 3.jpg" alt="Photo 1" class="gallery-img" />
+    <img src="images/king 2.jpg" alt="Photo 2" class="gallery-img" />
+    <img src="images/why.jpg" alt="Photo 3" class="gallery-img" />
+    <img src="images/cel.jpg" alt="Photo 4" class="gallery-img" />
+    <img src="images/cel2.jpg" alt="Photo 5" class="gallery-img" />
+    <img src="images/cel3.jpg" alt="Photo 6" class="gallery-img" />
+    <img src="images/cel4.jpg" alt="Photo 6" class="gallery-img" />
+    <img src="images/cel5.jpg" alt="Photo 6" class="gallery-img" />
+    <img src="images/IMG_7424.jpg" alt="Photo 6" class="gallery-img" />
+    <img src="images/IMG_7448.jpg" alt="Photo 6" class="gallery-img" />
+    <img src="images/IMG_7455.jpg" alt="Photo 6" class="gallery-img" />
+    <img src="images/IMG_7445.jpg" alt="Photo 6" class="gallery-img" />
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-lightbox" id="closeLightbox">&times;</span>
+    <img src="" alt="Preview" class="lightbox-img" id="lightboxImg">
+  </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="images/maxidivine-logo.png" alt="Maxidivine Logo" class="footer-logo">
+       <p>your all in one source for building and beyond.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/MaxidivineLimitedCompany"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/maxidivinelimited?igsh=Yzczemp5ZDBydndn"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Maxidivine Company Ltd</p>
+      <p>Email: info@maxidivine.com</p>
+      <p>Phone: 0558211951/0546359913</p>
+      <p>Location: Kumasi-Ejisu, Ghana</p>
+    </div>
+
+    <div class="footer-map">
+      <img src="images/m-removebg-preview.png" alt="Map" class="map-img">
+    </div>
+  </div>
+
+  <!-- Back to Top link inside the footer -->
+  <a href="#" class="back-to-top" title="Back to Top">&#8679;</a>
+
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Maxidivine. All rights reserved.</p>
+  </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  function showGallery(type) {
+    const tabs = document.querySelectorAll('.gallery-tab');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(type).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+ function openVideo(videoPath) {
+    const modal = document.getElementById("videoModal");
+    const player = document.getElementById("localVideoPlayer");
+    player.src = videoPath;
+    modal.style.display = "flex";
+  }
+
+  function closeVideo() {
+    const modal = document.getElementById("videoModal");
+    const player = document.getElementById("localVideoPlayer");
+    modal.style.display = "none";
+    player.pause();
+    player.currentTime = 0;
+    player.src = "";
+  }
+
+     const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('closeLightbox');
+
+  document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  window.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+
+   AOS.init({
+    duration: 1000,
+    once: false,
+    offset: 100
+  });
+
+  
+// =========================
+// Mobile Menu Toggle
+// =========================
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+
+  // =========================
+// Mobile Dropdown Menu Toggle
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownParents = document.querySelectorAll(".dropdown-parent");
+
+  dropdownParents.forEach(parent => {
+    const triggerLink = parent.querySelector("a");
+    const submenu = parent.querySelector(".dropdown-menu");
+
+    if (submenu && triggerLink) {
+      triggerLink.addEventListener("click", function (e) {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          e.stopPropagation(); // prevent bubbling
+
+          // Toggle the current submenu
+          submenu.classList.toggle("active");
+
+          // Close all others except this
+          dropdownParents.forEach(otherParent => {
+            const otherSubmenu = otherParent.querySelector(".dropdown-menu");
+            if (otherSubmenu !== submenu) {
+              otherSubmenu.classList.remove("active");
+            }
+          });
+        }
+      });
+    }
+  });
+
+  // Close all dropdowns if clicked outside
+  document.addEventListener("click", function (e) {
+    if (window.innerWidth <= 991 && !e.target.closest('.dropdown-parent')) {
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.classList.remove("active");
+      });
+    }
+  });
+});
+
+
+document.querySelector('.back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+</script>
+
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68533a19b91265191422091f/1iu2hltr0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+
+</body>
+</html>

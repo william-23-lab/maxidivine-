@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MD Roofings</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles/roofing.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/MDicon.jpg" type="image/png">
+</head>
+<body id="Top"> 
+
+  <header class="navbar">
+    <div class="container1">
+      <div class="logo" data-aos="slide-right" data-aos-delay="100">
+        <a href="index.html"><img src="images/Maxi.png" alt="maxidivine"></a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown-parent">
+            <a href="javascript:void(0)">Services</a>
+            <ul class="dropdown-menu">
+              <li class="dropdown-submenu">
+                <a href="buildingmaterials.html">Building Materials</a>
+                <ul class="submenu">
+                  <li><a href="buildingmaterials.html">Cement</a></li>
+                  <li><a href="buildingmaterials.html">Iron Rods</a></li>
+                  <li><a href="buildingmaterials.html">Concrete Products</a></li>
+                  <li><a href="buildingmaterials.html">Wall & Floor Tiles</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="#">Estate Services</a>
+                <ul class="submenu">
+                  <li><a href="#">Quantity Surveying</a></li>
+                  <li><a href="#">Architecture Work</a></li>
+                  <li><a href="#">U-drain construction</a></li>
+                  <li><a href="#">Architecture & Planning</a></li>
+                  <li><a href="#">Interior & Exterior Design</a></li>
+                  <li><a href="#">Building Project</a></li>
+                  <li><a href="#">Land Surveying</a></li>
+                  <li><a href="#">Estimates</a></li>
+                  <li><a href="#">Consultancy Services</a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu">
+                <a href="roofings.html">Roofing Products</a>
+                <ul class="submenu">
+                  <li><a href="roofings.html">Roofing Sheets</a></li>
+                  <li><a href="roofings.html">Roof Trusses</a></li>
+                  <li><a href="roofings.html">Roof Nails & Screws</a></li>
+                  <li><a href="roofings.html">Installation</a></li>
+                </ul>
+              </li>
+                <li class="sub">
+                <a href="blockfactory.html">Block Services</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="dropdown-parent">
+            <a href="#">News & Media</a>
+            <ul class="dropdown-menu">
+              <li class="sub">
+                <a href="newsblogs.html">News & Blogs</a>
+              </li>
+              <li class="sub"><a href="mediagallery.html">Media Gallery</a>
+              </li>
+            </ul>
+          </li>
+          <div class="language-selector">
+  <label for="language">🌐 Language:</label>
+  <select id="language">
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="es">Español</option>
+  </select>
+</div>
+         
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+
+ <section class="hero-slider">
+  <div class="slide active" style="background-image: url('images/quali-2.jpg');">
+    <div class="hero-content">
+      <h1>Secure Your Shelter</h1>
+      <p>We offer premium roofing materials designed for strength, beauty, and weather protection.</p>
+      <a href="#roofing-sheets" class="hero-btn">Explore More</a>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('images/quali-image.jpg');">
+    <div class="hero-content">
+      <h1>Built to Endure</h1>
+      <p>From classic profiles to modern styles, we supply it all for every project need.</p>
+      <a href="#roofing-sheets" class="hero-btn">Explore More</a>
+    </div>
+  </div>
+
+  <div class="slide" style="background-image: url('images/roof1.jpg');">
+    <div class="hero-content">
+      <h1>Elegant and Tough</h1>
+      <p>Our roofing sheets combine strength with sleek designs for long-lasting impressions.</p>
+      <a href="#roofing-sheets" class="hero-btn">Explore More</a>
+    </div>
+  </div>
+</div>
+<!-- Right Side Icons -->
+ <div class="hero-icons">
+  <div class="hero-icon-box">
+    <div class="icon-circle"><img src="images/roof.png" alt="Roofing"></div>
+    <h4>Roofing</h4>
+  </div>
+  <div class="hero-icon-box">
+    <div class="icon-circle"><img src="images/steel.png" alt="Steel"></div>
+    <h4>Trusses</h4>
+  </div>
+  <div class="hero-icon-box">
+    <div class="icon-circle"><img src="images/fasteners.png" alt="Concrete"></div>
+    <h4>Screws & Nails</h4>
+  </div>
+</div>
+</section>
+
+
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-box">
+      <h2 class="counter" data-target="200">0</h2>
+      <p>Completed Projects</p>
+    </div>
+    <div class="stat-box">
+      <h2 class="counter" data-target="9">0</h2>
+      <p>Branches</p>
+    </div>
+    <div class="stat-box">
+      <h2 class="counter" data-target="80">0</h2>
+      <p>Construction Workers</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="roofing-service-section" id="roofing-sheets" data-aos="fade-up">
+  <div class="roofing-service-container">
+    <!-- Left Text -->
+    <div class="roofing-service-text">
+      <h2>Durable Roofing Sheets for Every Structure</h2>
+      <p>
+        Our roofing sheets combine strength and style to provide lasting protection for all types of construction.
+        Whether you're building a home, warehouse, or commercial space, our sheets resist corrosion and withstand extreme weather conditions.
+      </p>
+      <ul class="roofing-features">
+        <li>Long-span & trapezoidal profiles</li>
+        <li>Rust-resistant galvanized steel</li>
+        <li>Color-coated & matte finishes</li>
+        <li>Lightweight yet strong</li>
+      </ul>
+      <a href="contact.html" class="roofing-btn">Contact Us</a>
+    </div>
+
+    <!-- Right Image -->
+    <div class="roofing-service-image">
+      <img src="images/goodroof.png" alt="Roofing Sheets">
+    </div>
+  </div>
+</section>
+
+<section class="roofing-service-section" id="roofing-truss" data-aos="fade-up">
+  <div class="roofing-service-container">
+    <!-- Right Image -->
+    <div class="roofing-service-image">
+      <img src="images/roof-truss.jpg" alt="Roof Trusses">
+    </div>
+
+    <!-- Left Text -->
+    <div class="roofing-service-text">
+      <h2>High-Quality Roof Trusses</h2>
+      <p>
+        Our roof trusses are precision-engineered for maximum load-bearing capacity and long-term performance.
+        Whether for residential, commercial, or industrial buildings, we fabricate strong, cost-effective trusses 
+        to meet your specific architectural requirements.
+      </p>
+      <ul class="roofing-features">
+        <li>Galvanized steel and wood options</li>
+        <li>Custom designs and sizes available</li>
+        <li>Corrosion-resistant coatings</li>
+        <li>Designed for structural stability and longevity</li>
+      </ul>
+      <a href="contact.html" class="roofing-btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="roofing-service-section" id="roof-fasteners">
+  <div class="roofing-service-container" data-aos="fade-up">
+    <!-- Text Left -->
+    <div class="roofing-service-text">
+      <h2><span>Roof</span> Screws & Nails</h2>
+      <p>
+        We provide high-quality roofing screws and nails designed for long-lasting performance in harsh weather. Whether for metal sheets or trusses, our fasteners ensure a firm grip and secure fit, enhancing roof durability and safety.
+      </p>
+      <ul class="roofing-features">
+        <li>Anti-rust coated roofing screws</li>
+        <li>Washer-sealed for leak prevention</li>
+        <li>Galvanized roofing nails</li>
+        <li>Ideal for metal, wood, and truss structures</li>
+      </ul>
+      <a href="contact.html" class="roofing-btn">Contact Us</a>
+    </div>
+
+    <!-- Image Right -->
+    <div class="roofing-service-image">
+      <img src="images/screws-1711601_1280.jpg" alt="Roof Screws & Nails" />
+    </div>
+  </div>
+</section>
+
+
+<section class="roofing-service-section"  id="installation"  data-aos="fade-up">
+  <div class="roofing-service-container">
+    
+    <!-- Text Content -->
+    <div class="roofing-service-text">
+      <h2><span>Roof</span> Installation</h2>
+      <p>
+        Our expert roof installation team ensures every project is completed with precision, safety, and long-lasting results. From initial setup to final inspection, we follow industry best practices to guarantee quality workmanship.
+      </p>
+      <ul class="roofing-features">
+        <li>Professional & certified installers</li>
+        <li>Leak-proof sealing & secure fastening</li>
+        <li>Timely project completion</li>
+        <li>Post-installation inspection & support</li>
+      </ul>
+      <a href="contact.html" class="roofing-btn">Contact Us</a>
+    </div>
+
+    <!-- Image -->
+    <div class="roofing-service-image">
+      <img src="images/download.jpeg" alt="Roof Installation">
+    </div>
+
+  </div>
+</section>
+
+
+<section class="quality-box-section">
+  <div class="quality-box">
+    <p class="box-subheading">── Maxidivine Means Quality You Can Rely On:</p>
+    <h2 class="box-heading">Built with Confidence. Backed by Performance.</h2>
+    <p class="box-intro">Built with care, engineered for durability - our trusses deliver on every promise.:</p>
+
+    <div class="quality-item">
+      <span class="quality-icon">🧰</span>
+      <div>
+        <h4>Detailed Design</h4>
+        <p>Our engineers use advanced software to create custom pre-engineered truss designs, tailored to your project’s specific needs.</p>
+      </div>
+    </div>
+
+    <div class="quality-item">
+      <span class="quality-icon">⭐</span>
+      <div>
+        <h4>Quality Materials</h4>
+        <p>We use aluzinc steel with a high zinc coating for our trusses, ensuring strength, corrosion resistance, and long-term durability.</p>
+      </div>
+    </div>
+
+    <div class="quality-item">
+      <span class="quality-icon">🔧</span>
+      <div>
+        <h4>Expert Fabrication</h4>
+        <p>Our skilled team uses precise screwing and bolting techniques to create strong and reliable truss connections.</p>
+      </div>
+    </div>
+
+    <div class="quality-item">
+      <span class="quality-icon">🔩</span>
+      <div>
+        <h4>Custom Solutions</h4>
+        <p>We offer a variety of truss designs, including gable trusses, hip trusses, and scissor trusses, and can customize designs to meet your requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="cta-parallax-section">
+  <div class="cta-parallax-box">
+    <p>To us, projects don’t only represent buildings, they add to the foundation of our clients’ future</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="cta-btn outline">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-form-section" id="contact">
+  <div class="contact-form-container">
+    <h2>We’d Love to Hear From You</h2>
+    <p>Get in touch with us to discuss how we can assist you on your next project.</p>
+
+    <form action="https://formspree.io/f/xblkller" method="post" class="contact-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-row">
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="interest" required>
+          <option value="" disabled selected>What are you interested in?</option>
+          <option value="building-materials">Building Materials</option>
+          <option value="roofing-products">Roofing Products</option>
+          <option value="estate-services">Estate Services</option>
+          <option value="consultation">Consultation</option>
+        </select>
+      </div>
+      <textarea name="message" placeholder="Leave your message here..." required></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <img src="images/maxidivine-logo.png" alt="Maxidivine Logo" class="footer-logo">
+      <p>your all in one source for building and beyond.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/MaxidivineLimitedCompany"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/maxidivinelimited?igsh=Yzczemp5ZDBydndn"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Maxidivine Company Ltd</p>
+      <p>Email: info@maxidivine.com</p>
+      <p>Phone: 0558211951/0546359913</p>
+      <p>Location: Kumasi-Ejisu, Ghana</p>
+    </div>
+
+    <div class="footer-map">
+      <img src="images/m-removebg-preview.png" alt="Map" class="map-img">
+    </div>
+  </div>
+
+  <!-- Back to Top link inside the footer -->
+  <a href="#" class="back-to-top" title="Back to Top">&#8679;</a>
+
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Maxidivine. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // ================================
+  // AOS Initialization
+  // ================================
+  AOS.init({ duration: 1000, once: true });
+
+  
+// =========================
+// Mobile Menu Toggle
+// =========================
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}
+
+  // =========================
+// Mobile Dropdown Menu Toggle
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownParents = document.querySelectorAll(".dropdown-parent");
+
+  dropdownParents.forEach(parent => {
+    const triggerLink = parent.querySelector("a");
+    const submenu = parent.querySelector(".dropdown-menu");
+
+    if (submenu && triggerLink) {
+      triggerLink.addEventListener("click", function (e) {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          e.stopPropagation(); // prevent bubbling
+
+          // Toggle the current submenu
+          submenu.classList.toggle("active");
+
+          // Close all others except this
+          dropdownParents.forEach(otherParent => {
+            const otherSubmenu = otherParent.querySelector(".dropdown-menu");
+            if (otherSubmenu !== submenu) {
+              otherSubmenu.classList.remove("active");
+            }
+          });
+        }
+      });
+    }
+  });
+
+  // Close all dropdowns if clicked outside
+  document.addEventListener("click", function (e) {
+    if (window.innerWidth <= 991 && !e.target.closest('.dropdown-parent')) {
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.classList.remove("active");
+      });
+    }
+  });
+});
+
+  // ================================
+  // Hero Auto Slider
+  // ================================
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  setInterval(showNextSlide, 6000);
+
+  // ================================
+  // Counter Animation on Scroll
+  // ================================
+  const counters = document.querySelectorAll('.counter');
+
+  function startCount(counter) {
+    const target = +counter.dataset.target;
+    let count = 0;
+    const increment = Math.ceil(target / 200);
+
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = count;
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+    update();
+  }
+
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const counter = entry.target;
+      if (entry.isIntersecting && !counter.classList.contains('counted')) {
+        counter.classList.add('counted');
+        startCount(counter);
+      } else if (!entry.isIntersecting) {
+        counter.classList.remove('counted');
+        counter.innerText = "0";
+      }
+    });
+  }, { threshold: 0.6 });
+
+  counters.forEach(counter => counterObserver.observe(counter));
+
+// =========================
+// Mobile Dropdown Menu Toggle
+// =========================
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdownParents = document.querySelectorAll(".dropdown-parent");
+
+  dropdownParents.forEach(parent => {
+    const triggerLink = parent.querySelector("a");
+    const submenu = parent.querySelector(".dropdown-menu");
+
+    if (submenu && triggerLink) {
+      triggerLink.addEventListener("click", function (e) {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          e.stopPropagation(); // prevent bubbling
+
+          // Toggle the current submenu
+          submenu.classList.toggle("active");
+
+          // Close all others except this
+          dropdownParents.forEach(otherParent => {
+            const otherSubmenu = otherParent.querySelector(".dropdown-menu");
+            if (otherSubmenu !== submenu) {
+              otherSubmenu.classList.remove("active");
+            }
+          });
+        }
+      });
+    }
+  });
+
+  // Close all dropdowns if clicked outside
+  document.addEventListener("click", function (e) {
+    if (window.innerWidth <= 991 && !e.target.closest('.dropdown-parent')) {
+      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+        menu.classList.remove("active");
+      });
+    }
+  });
+});
+
+ document.querySelector('.back-to-top').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
+
+
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68533a19b91265191422091f/1iu2hltr0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+                                                                                                                               
+</body>
+</html>
