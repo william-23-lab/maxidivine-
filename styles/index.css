@@ -2038,3 +2038,40 @@ color: #011640;
 
 
 
+/* Default: show everything */
+.topbar-left,
+.topbar-ct,
+.topbar-cta,
+.topbar-ctas,
+.topbar-right,
+.brand-with-dropdown {
+  display: inline-block;
+}
+
+/* Mobile view (max width 768px = tablets/phones) */
+@media (max-width: 768px) {
+  /* Hide everything except email and MD Construction */
+  .topbar-ct,
+  .topbar-cta,
+  .topbar-ctas,
+  .topbar-right {
+    display: none !important;
+  }
+
+  /* Keep email visible */
+  .topbar-left {
+    display: block;
+  }
+
+  /* Keep brand (MD CONSTRUCTION) visible */
+  .brand-with-dropdown {
+    display: block;
+  }
+
+  /* Optional: center them on mobile */
+  .topbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
