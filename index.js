@@ -202,6 +202,45 @@ if (prevBtn && nextBtn) {
   });
 
 
+  
+const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+const nextbtn = document.querySelector('.next');
+const prevbtn = document.querySelector('.prev');
+let currentIndex = 0;
+let autoScroll;
+
+function updateCarousel() {
+  const itemWidth = items[0].offsetWidth + 15; // Include gap
+  track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % (items.length - 2); // -2 to keep 3 visible
+  updateCarousel();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + (items.length - 2)) % (items.length - 2);
+  updateCarousel();
+}
+
+// Auto-scroll
+function startAutoScroll() {
+  autoScroll = setInterval(nextSlide, 3000);
+}
+
+// Pause on hover/interaction
+track.addEventListener('mouseenter', () => clearInterval(autoScroll));
+track.addEventListener('mouseleave', startAutoScroll);
+
+// Manual controls
+nextbtn.addEventListener('click', nextSlide);
+prevbtn.addEventListener('click', prevSlide);
+
+// Initialize
+startAutoScroll();
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".hero-slider");
@@ -285,3 +324,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   })
+
+
+  // Highlight active nav link
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-links ul > li > a:not(.dropdown-parent > a)');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    
+    // Check if link matches current page
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+    
+    // Special case for index.html (homepage)
+    if (currentPage === '' && link.getAttribute('href') === 'index.html') {
+      link.classList.add('active');
+    }
+  });
+});

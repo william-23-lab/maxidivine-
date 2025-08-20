@@ -90,6 +90,22 @@ body {
   font-size: 15px;
 }
 
+/* Active link style */
+.nav-links ul > li > a.active {
+  color: #d35400 !important;
+  position: relative;
+}
+
+/* Optional: Add underline */
+.nav-links ul > li > a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #d35400;
+}
 
 /*======================
   HAMBURGER STYLES
@@ -599,9 +615,10 @@ body {
 .story-image img {
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-   margin-left: -2px;
-   width: 370px;
-   height: 240px;
+   margin-left: 30px;
+   margin-right: -50px;
+   width: 400px;
+   height: 450px;
 }
 
 @media (max-width: 768px) {
@@ -622,6 +639,16 @@ body {
   .story-image {
     margin-top: 20px;
   }
+
+  .story-image img {
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+   margin-left: 30px;
+   margin-left: -50px;
+   width: 350px;
+   height: 40vh;
+  
+}
 }
 
 

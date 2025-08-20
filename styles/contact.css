@@ -90,6 +90,22 @@ body {
   font-size: 15px;
 }
 
+/* Active link style */
+.nav-links ul > li > a.active {
+  color: #d35400 !important;
+  position: relative;
+}
+
+/* Optional: Add underline */
+.nav-links ul > li > a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #d35400;
+}
 
 /*======================
   HAMBURGER STYLES
@@ -459,9 +475,11 @@ body {
   width: 100%;
   margin-top: 40px;
   margin-bottom: 50px;
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #ef7512;
+  padding: 3px 0;
 }
 
 .map-section h2 {
@@ -757,4 +775,91 @@ body {
     margin-right: 0;
     text-align: center; /* Optional: center it on mobile */
   }
+}
+
+
+.branches-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9; /* You can match to your theme */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #333; /* Match your brand */
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.branch-card {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+}
+
+.branch-name {
+  font-size: 1.3rem;
+  color: #d35400; /* Brand color */
+  margin-bottom: 10px;
+}
+
+.branch-address,
+.branch-phone {
+  font-size: 0.95rem;
+  color: #030c24;
+  margin: 5px 0;
+}
+
+.branch-address i,
+.branch-phone i {
+  margin-right: 8px;
+  color: #d35400; /* Brand color */
+}
+
+
+.modern-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  color: #011640;
+  margin-bottom: 20px;
+}
+
+.modern-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #ef7512, #1d2ca1);
+  border-radius: 2px;
+}
+
+.modern-title::before {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  z-index: 2;
 }

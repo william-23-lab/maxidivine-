@@ -116,10 +116,10 @@
   <div class="contact-page-container">
     <!-- Left: Contact Info -->
     <div class="contact-info">
-      <div class="info-item">
+       <div class="info-item">
         <div class="info-icon"><img src="images/home.png" alt="Address"></div>
         <div>
-          <h4>Address</h4>
+          <h4>Main Office</h4>
           <p>N6 18, Ejisu-Kwamo,<br> High Ways– Opposite Zonda</p>
         </div>
       </div>
@@ -127,7 +127,7 @@
         <div class="info-icon"><img src="images/telephone-symbol-button.png" alt="Phone"></div>
         <div>
           <h4>Phone</h4>
-          <p>0558211951/0546359913</p>
+          <p> +233 (0)536591145/558211951/249187334</p>
         </div>
       </div>
       <div class="info-item">
@@ -151,6 +151,47 @@
     </div>
   </div>
 </section>
+
+<!-- Our Shop Branches Section -->
+<section class="branches-section">
+  <div class="container">
+    <h2 class="modern-title">Our Shop Branches</h2>
+    <div class="branches-grid">
+
+      <!-- Branch Card -->
+      <div class="branch-card">
+        <h3 class="branch-name">Boankra</h3>
+        <p class="branch-address"><i class="fas fa-map-marker-alt"></i>Ejisu-Konogo road</p>
+        <p class="branch-phone"><i class="fas fa-phone"></i> +233 24 128 5598 </p>
+      </div>
+
+      <!-- Branch Card -->
+      <div class="branch-card">
+        <h3 class="branch-name">Adwumakase</h3>
+        <p class="branch-address"><i class="fas fa-map-marker-alt"></i></p>
+        <p class="branch-phone"><i class="fas fa-phone"></i></p>
+      </div>
+
+      <!-- Branch Card -->
+      <div class="branch-card">
+        <h3 class="branch-name">Mamponteng</h3>
+        <p class="branch-address"><i class="fas fa-map-marker-alt"></i></p>
+        <p class="branch-phone"><i class="fas fa-phone"></i></p>
+      </div>
+
+         <!-- Branch Card -->
+      <div class="branch-card">
+        <h3 class="branch-name">Adwumakase block factory</h3>
+        <p class="branch-address"><i class="fas fa-map-marker-alt"></i></p>
+        <p class="branch-phone"><i class="fas fa-phone"></i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 
 <section class="map-section">
   <h2>Find Us Here</h2>
@@ -194,7 +235,7 @@
       <h4>Contact Us</h4>
       <p>Maxidivine Company Ltd</p>
       <p>Email: info@maxidivine.com</p>
-      <p>Phone: 0558211951/0546359913</p>
+      <p>Phone: +233 (0)536591145/558211951</p>
       <p>Location: Kumasi-Ejisu, Ghana</p>
     </div>
 
@@ -238,7 +279,27 @@ document.querySelector('.back-to-top').addEventListener('click', function(e) {
       behavior: 'smooth'
     });
   });
+ 
 
+   // Highlight active nav link
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-links ul > li > a:not(.dropdown-parent > a)');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    
+    // Check if link matches current page
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+    
+    // Special case for index.html (homepage)
+    if (currentPage === '' && link.getAttribute('href') === 'contact.html') {
+      link.classList.add('active');
+    }
+  });
+});
 </script>
 
 

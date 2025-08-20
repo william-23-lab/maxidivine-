@@ -112,6 +112,12 @@ body.scrolled-down .navbar {
   font-size: 15px;
 }
 
+/* Active link style */
+.nav-links ul > li > a.active {
+  color: #d35400 !important;
+  position: relative;
+}
+
 
 /*======================
   HAMBURGER STYLES
@@ -290,7 +296,7 @@ body {
 
 .hero-slider {
   position: relative;
-  height: 80vh;
+  height: 87vh;
   overflow: hidden;
 }
 
@@ -365,9 +371,9 @@ body {
 .overlay h1 {
   text-align: left;
   margin-left: 25px;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 0.2rem;
-  margin-top: 90px;
+  margin-top: 150px;
   line-height: 1.2;
 }
 
@@ -379,6 +385,8 @@ body {
 }
 .hero-btn {
   display: inline-block;
+  font-size: 16px;
+  font-weight: bolder;
   padding: 12px 24px;
   background-color: #d35400;
   color: #030c24;
@@ -1807,6 +1815,7 @@ body.scrolled-up .top-bar {
   padding: 5px 10px;
   border-radius: 4px;
   transition: background 0.3s ease;
+  margin-left: 50px;
 }
 
 .brand-trigger:hover {
@@ -1886,8 +1895,31 @@ body.scrolled-up .top-bar {
 color: #011640;
 }
 
+.cta-btns.phone {
+color: #011640;
+}
+
 .cta-btn.phone:hover {
   background: rgba(211, 84, 0, 0.3);
+}
+
+.topbar-ctas {
+  display: flex;
+  gap: 15px;
+  margin-left: 150px;
+}
+
+.cta-btn.phone {
+color: #011640;
+}
+
+.cta-btns.phone {
+color: #011640;
+}
+
+.question {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 
@@ -1933,3 +1965,76 @@ color: #011640;
     display: inline-block;
   }
 }
+
+
+.carusels-container {
+  padding: 30px 0;
+  background-color: #030c24;
+  margin-bottom: 40px;
+  z-index: 9;
+}
+
+.highlights {
+ font-size: 2.5rem;
+  color: #d35400;
+  margin-bottom: 3rem;
+  white-space: nowrap;
+  margin-left: 20px;
+}
+
+.carousel-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 15px;
+}
+
+.carousel-item {
+  min-width: calc(33.33% - 10px); /* Show 3 at a time */
+  flex: 0 0 auto;
+}
+
+.carousel-item img {
+  height: 250px;
+  width: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 93%;
+  transform: translateY(-50%);
+  background: #d35400;
+  color: #030c24;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev { left: 88%; }
+.next { right: 20px; }
+
+.view-all {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #d35400;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+
+

@@ -431,12 +431,33 @@ body {
 
 
 /* Photos */
+
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.project-card .tall {
+  height: 400px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-
 
 .gallery-grid {
   display: grid;

@@ -203,7 +203,7 @@ ware and tiles showroom in Kumasi.
       </p>
     </div>
     <div class="story-image" data-aos="fade-left">
-      <img src="images/pexels-mikael-blomkvist-8961131.jpg" alt="Our Story at Maxidivine" />
+       <img src="images/Mas.png" alt="Our Vision at Maxidivine">
     </div>
   </div>
 </section>
@@ -215,7 +215,7 @@ ware and tiles showroom in Kumasi.
       <p>Have questions or want to work with us? Reach out — we're here to help you build better.</p>
       <div class="contact-info">
         <p><strong>📍 Address:</strong> N6 18 Ejisu-Kwamo Highways, Opposite Zonda Company</p>
-        <p><strong>📞 Phone:</strong> +233 54 635 9913</p>
+        <p><strong>📞 Phone:</strong> +233 (0)536591145/558211951/249187334</p>
         <p><strong>📧 Email:</strong> info@maxidivine.com</p> 
       </div>
     </div>
@@ -255,7 +255,7 @@ ware and tiles showroom in Kumasi.
       <h4>Contact Us</h4>
       <p>Maxidivine Company Ltd</p>
       <p>Email: info@maxidivine.com</p>
-      <p>Phone: 0558211951/0546359913</p>
+      <p>Phone: +233 (0)536591145/558211951</p>
        <p>Location: Kumasi-Ejisu, Ghana</p>
     </div>
 
@@ -341,6 +341,26 @@ document.querySelector('.back-to-top').addEventListener('click', function(e) {
       behavior: 'smooth'
     });
   });
+
+    // Highlight active nav link
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-links ul > li > a:not(.dropdown-parent > a)');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href').split('/').pop();
+    
+    // Check if link matches current page
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+    
+    // Special case for index.html (homepage)
+    if (currentPage === '' && link.getAttribute('href') === 'about.html') {
+      link.classList.add('active');
+    }
+  });
+});
 
 </script>
 
