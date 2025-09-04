@@ -27,6 +27,7 @@ const navLinks = document.querySelector(".nav-links");
 
 if (hamburger && navLinks) {
   hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
     navLinks.classList.toggle("active");
   });
 }
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const dropdownParents = document.querySelectorAll(".dropdown-parent");
 
-  dropdownParents.forEach(parent => {
+  dropdownParents.forEach((parent) => {
     const triggerLink = parent.querySelector("a");
     const submenu = parent.querySelector(".dropdown-menu");
 
@@ -134,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
           submenu.classList.toggle("active");
 
           // Close all others except this
-          dropdownParents.forEach(otherParent => {
+          dropdownParents.forEach((otherParent) => {
             const otherSubmenu = otherParent.querySelector(".dropdown-menu");
             if (otherSubmenu !== submenu) {
               otherSubmenu.classList.remove("active");
@@ -147,14 +148,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Close all dropdowns if clicked outside
   document.addEventListener("click", function (e) {
-    if (window.innerWidth <= 991 && !e.target.closest('.dropdown-parent')) {
-      document.querySelectorAll(".dropdown-menu").forEach(menu => {
+    if (window.innerWidth <= 991 && !e.target.closest(".dropdown-parent")) {
+      document.querySelectorAll(".dropdown-menu").forEach((menu) => {
         menu.classList.remove("active");
       });
     }
   });
 });
-
 
 // =========================
 // Language Switcher
@@ -193,20 +193,18 @@ if (prevBtn && nextBtn) {
   nextBtn.addEventListener("click", () => slideNews(1));
 }
 
- document.querySelector('.back-to-top').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+document.querySelector(".back-to-top").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
+});
 
-
-  
-const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
-const nextbtn = document.querySelector('.next');
-const prevbtn = document.querySelector('.prev');
+const track = document.querySelector(".carousel-track");
+const items = document.querySelectorAll(".carousel-item");
+const nextbtn = document.querySelector(".next");
+const prevbtn = document.querySelector(".prev");
 let currentIndex = 0;
 let autoScroll;
 
@@ -231,16 +229,15 @@ function startAutoScroll() {
 }
 
 // Pause on hover/interaction
-track.addEventListener('mouseenter', () => clearInterval(autoScroll));
-track.addEventListener('mouseleave', startAutoScroll);
+track.addEventListener("mouseenter", () => clearInterval(autoScroll));
+track.addEventListener("mouseleave", startAutoScroll);
 
 // Manual controls
-nextbtn.addEventListener('click', nextSlide);
-prevbtn.addEventListener('click', prevSlide);
+nextbtn.addEventListener("click", nextSlide);
+prevbtn.addEventListener("click", prevSlide);
 
 // Initialize
 startAutoScroll();
-
 
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".hero-slider");
@@ -281,67 +278,63 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoSlide();
 });
 
+const body = document.body;
+let lastScroll = window.scrollY;
 
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
 
+  if (currentScroll <= 0) {
+    // At top of the page
+    body.classList.add("at-top");
+    body.classList.remove("scrolled-up", "scrolled-down");
+  } else if (currentScroll > lastScroll) {
+    // Scrolling down
+    body.classList.remove("scrolled-up", "at-top");
+    body.classList.add("scrolled-down");
+  } else {
+    // Scrolling up (but not at top)
+    body.classList.remove("scrolled-down", "at-top");
+    body.classList.add("scrolled-up");
+  }
 
-  const body = document.body;
-  let lastScroll = window.scrollY;
+  lastScroll = currentScroll;
+});
 
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.scrollY;
+document.addEventListener("DOMContentLoaded", () => {
+  const brandTrigger = document.querySelector(".brand-trigger");
+  const dropdown = document.querySelector(".services-dropdown");
 
-    if (currentScroll <= 0) {
-      // At top of the page
-      body.classList.add("at-top");
-      body.classList.remove("scrolled-up", "scrolled-down");
-    } else if (currentScroll > lastScroll) {
-      // Scrolling down
-      body.classList.remove("scrolled-up", "at-top");
-      body.classList.add("scrolled-down");
-    } else {
-      // Scrolling up (but not at top)
-      body.classList.remove("scrolled-down", "at-top");
-      body.classList.add("scrolled-up");
-    }
-
-    lastScroll = currentScroll;
+  brandTrigger.addEventListener("click", () => {
+    dropdown.classList.toggle("show");
   });
 
+  // Optional: close dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!brandTrigger.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove("show");
+    }
+  });
+});
 
+// Highlight active nav link
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(
+    ".nav-links ul > li > a:not(.dropdown-parent > a)"
+  );
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const brandTrigger = document.querySelector(".brand-trigger");
-    const dropdown = document.querySelector(".services-dropdown");
+  navLinks.forEach((link) => {
+    const linkPage = link.getAttribute("href").split("/").pop();
 
-    brandTrigger.addEventListener("click", () => {
-      dropdown.classList.toggle("show");
-    });
-
-    // Optional: close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!brandTrigger.contains(e.target) && !dropdown.contains(e.target)) {
-        dropdown.classList.remove("show");
-      }
-    });
-  })
-
-
-  // Highlight active nav link
-document.addEventListener('DOMContentLoaded', function() {
-  const navLinks = document.querySelectorAll('.nav-links ul > li > a:not(.dropdown-parent > a)');
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href').split('/').pop();
-    
     // Check if link matches current page
     if (linkPage === currentPage) {
-      link.classList.add('active');
+      link.classList.add("active");
     }
-    
+
     // Special case for index.html (homepage)
-    if (currentPage === '' && link.getAttribute('href') === 'index.html') {
-      link.classList.add('active');
+    if (currentPage === "" && link.getAttribute("href") === "index.html") {
+      link.classList.add("active");
     }
   });
 });
