@@ -452,6 +452,7 @@ body {
 
   .mission-text {
     text-align: center;
+    margin-left: -30px;
   }
 
   .mission-image img {
@@ -630,8 +631,8 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     margin-left: 30px;
     margin-left: -50px;
-    width: 350px;
-    height: 40vh;
+    width: 330px;
+    height: 300px;
   }
 }
 
